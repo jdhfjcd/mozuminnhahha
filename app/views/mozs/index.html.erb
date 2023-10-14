@@ -1,0 +1,27 @@
+<h1>Mozs#index</h1>
+<p>Find me in app/views/mozs/index.html.erb</p>
+<h1>yuisann一覧</h1>
+
+<% @moz.each do |t|%>
+
+    <div>
+        <h2>mozku：
+            <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.mozuku) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span> 
+        </h2>
+    </div>
+
+    <div>
+        <h2>nozmi：
+            <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.nozomi) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+            </span>
+        </h2>
+    </div>
+
+<% end %>
+
+<%= link_to '新規登録をする', new_moz_path%>

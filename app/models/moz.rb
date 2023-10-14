@@ -1,0 +1,2 @@
+class Moz < ApplicationRecord
+end
